@@ -20,7 +20,7 @@ void V11_Task1() {
 	for (int i = 0; i < 5; i++) {
 		std::cout << "A" << i << " " << a.getX(i) << "    B" << i << " " << b.getX(i) << "    C" << i << " " << c.getX(i) << "    R" << i << " " << r.getX(i) <<  "\n";
 	}
-	
+
 	r = a * 5 + b * 7 - 3 * c;
 	
 	std::cout << "\nAfter -----\n";

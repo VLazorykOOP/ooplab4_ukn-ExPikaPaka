@@ -195,7 +195,7 @@ Matrix Matrix::operator+(Matrix a) {
 	return tmp;
 }
 
-Matrix& Matrix::operator+=(Matrix& a) {
+void Matrix::operator+=(Matrix& a) {
 	if ((row == a.row) && (collum = a.collum)) {
 		for (int i = 0; i < row; i++) {
 			for (int j = 0; j < collum; j++) {
@@ -206,10 +206,9 @@ Matrix& Matrix::operator+=(Matrix& a) {
 	else {
 		error = 1;
 	}
-	return *this;
 }
 
-Matrix& Matrix::operator+=(Matrix&& a) {
+void Matrix::operator+=(Matrix&& a) {
 	if ((row == a.row) && (collum = a.collum)) {
 		for (int i = 0; i < row; i++) {
 			for (int j = 0; j < collum; j++) {
@@ -220,7 +219,6 @@ Matrix& Matrix::operator+=(Matrix&& a) {
 	else {
 		error = 1;
 	}
-	return *this;
 }
 
 Matrix Matrix::operator-(Matrix a) {
@@ -238,7 +236,7 @@ Matrix Matrix::operator-(Matrix a) {
 	return tmp;
 }
 
-Matrix& Matrix::operator-=(Matrix& a) {
+void Matrix::operator-=(Matrix& a) {
 	if ((row == a.row) && (collum = a.collum)) {
 		for (int i = 0; i < row; i++) {
 			for (int j = 0; j < collum; j++) {
@@ -249,10 +247,9 @@ Matrix& Matrix::operator-=(Matrix& a) {
 	else {
 		error = 1;
 	}
-	return *this;
 }
 
-Matrix& Matrix::operator-=(Matrix&& a) {
+void Matrix::operator-=(Matrix&& a) {
 	if ((row == a.row) && (collum = a.collum)) {
 		for (int i = 0; i < row; i++) {
 			for (int j = 0; j < collum; j++) {
@@ -263,7 +260,6 @@ Matrix& Matrix::operator-=(Matrix&& a) {
 	else {
 		error = 1;
 	}
-	return *this;
 }
 
 Matrix Matrix::operator*(Matrix a) {
@@ -281,7 +277,7 @@ Matrix Matrix::operator*(Matrix a) {
 	return tmp;
 }
 
-Matrix& Matrix::operator*=(Matrix& a) {
+void Matrix::operator*=(Matrix& a) {
 	if ((row == a.row) && (collum = a.collum)) {
 		for (int i = 0; i < row; i++) {
 			for (int j = 0; j < collum; j++) {
@@ -292,10 +288,9 @@ Matrix& Matrix::operator*=(Matrix& a) {
 	else {
 		error = 1;
 	}
-	return *this;
 }
 
-Matrix& Matrix::operator*=(Matrix&& a) {
+void Matrix::operator*=(Matrix&& a) {
 	if ((row == a.row) && (collum = a.collum)) {
 		for (int i = 0; i < row; i++) {
 			for (int j = 0; j < collum; j++) {
@@ -306,7 +301,6 @@ Matrix& Matrix::operator*=(Matrix&& a) {
 	else {
 		error = 1;
 	}
-	return *this;
 }
 
 Matrix Matrix::operator/(Matrix a) {
@@ -324,7 +318,7 @@ Matrix Matrix::operator/(Matrix a) {
 	return tmp;
 }
 
-Matrix& Matrix::operator/=(Matrix& a) {
+void Matrix::operator/=(Matrix& a) {
 	if ((row == a.row) && (collum = a.collum)) {
 		for (int i = 0; i < row; i++) {
 			for (int j = 0; j < collum; j++) {
@@ -335,10 +329,9 @@ Matrix& Matrix::operator/=(Matrix& a) {
 	else {
 		error = 1;
 	}
-	return *this;
 }
 
-Matrix& Matrix::operator/=(Matrix&& a) {
+void Matrix::operator/=(Matrix&& a) {
 	if ((row == a.row) && (collum = a.collum)) {
 		for (int i = 0; i < row; i++) {
 			for (int j = 0; j < collum; j++) {
@@ -349,7 +342,6 @@ Matrix& Matrix::operator/=(Matrix&& a) {
 	else {
 		error = 1;
 	}
-	return *this;
 }
 
 
@@ -364,14 +356,12 @@ Matrix Matrix::operator*(float a) {
 	return tmp;
 }
 
-Matrix& Matrix::operator*=(float a) {
+void Matrix::operator*=(float a) {
 	for (int i = 0; i < row; i++) {
 		for (int j = 0; j < collum; j++) {
 			setX(i, j, getX(i, j) * a);
 		}
 	}
-
-	return *this;
 }
 
 Matrix Matrix::operator/(float a) {
@@ -389,7 +379,7 @@ Matrix Matrix::operator/(float a) {
 	return tmp;
 }
 
-Matrix& Matrix::operator/=(float a) {
+void Matrix::operator/=(float a) {
 	if (a) {
 		for (int i = 0; i < row; i++) {
 			for (int j = 0; j < collum; j++) {
@@ -400,7 +390,6 @@ Matrix& Matrix::operator/=(float a) {
 	else {
 		error = 1;
 	}
-	return *this;
 }
 
 Matrix Matrix::operator+(float a) {

@@ -26,26 +26,26 @@ public:
 	Matrix& operator=(Matrix&& a);
 
 	Matrix operator+(Matrix a);
-	Matrix& operator+=(Matrix& a);
-	Matrix& operator+=(Matrix&& a);
+	void operator+=(Matrix& a);
+	void operator+=(Matrix&& a);
 
 	Matrix operator-(Matrix a);
-	Matrix& operator-=(Matrix& a);
-	Matrix& operator-=(Matrix&& a);
+	void operator-=(Matrix& a);
+	void operator-=(Matrix&& a);
 
 	Matrix operator*(Matrix a);
-	Matrix& operator*=(Matrix& a);
-	Matrix& operator*=(Matrix&& a);
+	void operator*=(Matrix& a);
+	void operator*=(Matrix&& a);
 
 	Matrix operator/(Matrix a);
-	Matrix& operator/=(Matrix& a);
-	Matrix& operator/=(Matrix&& a);
+	void operator/=(Matrix& a);
+	void operator/=(Matrix&& a);
 
 	Matrix operator*(float a);
-	Matrix& operator*=(float a);
+	void operator*=(float a);
 
 	Matrix operator/(float a);
-	Matrix& operator/=(float a);
+	void operator/=(float a);
 
 	Matrix operator+(float a);
 	void operator+=(float a);
