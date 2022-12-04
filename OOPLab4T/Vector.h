@@ -26,20 +26,20 @@ public:
 
 
 	Vector operator+(Vector a);
-	Vector& operator+=(Vector& a);
-	Vector& operator+=(Vector&& a);
+	void operator+=(Vector& a);
+	void operator+=(Vector&& a);
 
 	Vector operator-(Vector a);
-	Vector& operator-=(Vector& a);
-	Vector& operator-=(Vector&& a);
+	void operator-=(Vector& a);
+	void operator-=(Vector&& a);
 
 	Vector operator*(Vector a);
-	Vector& operator*=(Vector& a);
-	Vector& operator*=(Vector&& a);
+	void operator*=(Vector& a);
+	void operator*=(Vector&& a);
 
 	Vector operator/(Vector a);
-	Vector& operator/=(Vector& a);
-	Vector& operator/=(Vector&& a);
+	void operator/=(Vector& a);
+	void operator/=(Vector&& a);
 
 
 

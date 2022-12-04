@@ -151,7 +151,7 @@ Vector Vector::operator+(Vector a) {
 }
 
 
-Vector& Vector::operator+=(Vector &a) {
+void Vector::operator+=(Vector &a) {
 	
 	if (length > a.length || length == a.length) {
 		for (unsigned int i = 0; i < a.length; i++) {
@@ -161,10 +161,9 @@ Vector& Vector::operator+=(Vector &a) {
 	else {
 		error = 1;
 	}
-	return *this;
 }
 
-Vector& Vector::operator+=(Vector&& a) {
+void Vector::operator+=(Vector&& a) {
 
 	if (length > a.length || length == a.length) {
 		for (unsigned int i = 0; i < a.length; i++) {
@@ -174,7 +173,6 @@ Vector& Vector::operator+=(Vector&& a) {
 	else {
 		error = 1;
 	}
-	return *this;
 }
 
 
@@ -194,7 +192,7 @@ Vector Vector::operator-(Vector a) {
 	return tmp;
 }
 
-Vector& Vector::operator-=(Vector& a) {
+void Vector::operator-=(Vector& a) {
 
 	if (length > a.length || length == a.length) {
 		for (unsigned int i = 0; i < a.length; i++) {
@@ -204,10 +202,9 @@ Vector& Vector::operator-=(Vector& a) {
 	else {
 		error = 1;
 	}
-	return *this;
 }
 
-Vector& Vector::operator-=(Vector&& a) {
+void Vector::operator-=(Vector&& a) {
 
 	if (length > a.length || length == a.length) {
 		for (unsigned int i = 0; i < a.length; i++) {
@@ -217,7 +214,6 @@ Vector& Vector::operator-=(Vector&& a) {
 	else {
 		error = 1;
 	}
-	return *this;
 }
 
 
@@ -237,7 +233,7 @@ Vector Vector::operator/(Vector a) {
 	return tmp;
 }
 
-Vector& Vector::operator/=(Vector& a) {
+void Vector::operator/=(Vector& a) {
 
 	if (length > a.length || length == a.length) {
 		for (unsigned int i = 0; i < a.length; i++) {
@@ -247,10 +243,9 @@ Vector& Vector::operator/=(Vector& a) {
 	else {
 		error = 1;
 	}
-	return *this;
 }
 
-Vector& Vector::operator/=(Vector&& a) {
+void Vector::operator/=(Vector&& a) {
 
 	if (length > a.length || length == a.length) {
 		for (unsigned int i = 0; i < a.length; i++) {
@@ -260,7 +255,6 @@ Vector& Vector::operator/=(Vector&& a) {
 	else {
 		error = 1;
 	}
-	return *this;
 }
 
 
@@ -280,7 +274,7 @@ Vector Vector::operator*(Vector a) {
 	return tmp;
 }
 
-Vector& Vector::operator*=(Vector& a) {
+void Vector::operator*=(Vector& a) {
 
 	if (length > a.length || length == a.length) {
 		for (unsigned int i = 0; i < a.length; i++) {
@@ -290,10 +284,9 @@ Vector& Vector::operator*=(Vector& a) {
 	else {
 		error = 1;
 	}
-	return *this;
 }
 
-Vector& Vector::operator*=(Vector&& a) {
+void Vector::operator*=(Vector&& a) {
 
 	if (length > a.length || length == a.length) {
 		for (unsigned int i = 0; i < a.length; i++) {
@@ -303,7 +296,6 @@ Vector& Vector::operator*=(Vector&& a) {
 	else {
 		error = 1;
 	}
-	return *this;
 }
 
 
